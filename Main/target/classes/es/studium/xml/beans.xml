@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="centro1" class="es.studium.Centro">
+	<property name="nombreCentro" value="Escuela de inglés" ></property>
+	<property name="direccionCentro" value = "Reyes Católicos, 14"></property>
+	</bean>
+	
+	<bean id="centro2" class="es.studium.Centro">
+	<property name="nombreCentro" value="Escuela de francés"></property>
+	<property name="direccionCentro" value="Cristóbal Colón, 92"></property>
+	</bean>
+	
+	<bean id="aA" class="es.studium.Alumno">
+	<property name="nombre" value="Ana Abel"></property>
+	<property name="direccion" value="Paseo de América, 15"></property>
+	<property name="asignatura" value="Inglés B1"></property>
+	<property name="nota" value="7"></property>
+	<property name="centro" ref="centro1"></property>
+	</bean>
+	
+	<bean id="bB" class = "es.studium.Alumno">
+	<property name="nombre" value="Benito Bueno"></property>
+	<property name="direccion" value="Reyes Católicos, 16"></property>
+	<property name="asignatura" value="Inglés B2"></property>
+	<property name="nota" value="6"></property>
+	<property name="centro" ref="centro1"></property>
+	</bean>
+	
+	<bean id="cC" class = "es.studium.Alumno">
+	<property name="nombre" value="Carmen Cano"></property>
+	<property name="direccion" value="Reyes Católicos, 2"></property>
+	<property name="asignatura" value="Inglés B1"></property>
+	<property name="nota" value="5"></property>
+	<property name="centro" ref="centro1"></property>
+	</bean>
+	
+	<bean id="eE" class = "es.studium.Alumno">
+	<property name="nombre" value="Esteban Escalera"></property>
+	<property name="direccion" value="Isabel la Católica, 28"></property>
+	<property name="asignatura" value="Francés B1"></property>
+	<property name="nota" value="9"></property>
+	<property name="centro" ref="centro2"></property>
+	</bean>
+	
+	<bean id="fF" class = "es.studium.Alumno">
+	<property name="nombre" value="Francisco Farfán"></property>
+	<property name="direccion" value="Cristóbal Colón, s/n"></property>
+	<property name="asignatura" value="Francés A2"></property>
+	<property name="nota" value="8.5f"></property>
+	<property name="centro" ref="centro2"></property>
+	</bean>
+	
+
+</beans>
